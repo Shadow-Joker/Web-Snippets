@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            body
+            {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100%;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                background: linear-gradient(to bottom,#0f0c29,#302b63,#24243e);
+            }
+            .main
+            {
+                width: 350px;
+                height: 500px;
+                background: red;
+                overflow: hidden;
+                background: pink;
+                border-radius: 10px;
+                box-shadow: 5px 20px 50px #000;
+            }
+            #chk
+            {
+                display: none;
+            }
+            .sign-up
+            {
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
+            label
+            {
+                color: white;
+                font-size: 2.3em;
+                justify-content: center;
+                display: flex;
+                margin: 30px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: .5s ease-in-out;
+            }
+            input
+            {
+                width: 60%;
+                height: 20%;
+                background: #e0dee0;
+                justify-content: center;
+                display: flex;
+                margin: 20px auto;
+                padding: 10px;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+            }
+            button
+            {
+                width: 60%;
+                height: 40%;
+                margin: 10px auto;
+                padding: 10px;
+                justify-content: center;
+                display: block;
+                color: #fff;
+                background: #573b8a;
+                font-size: 1em;
+                font-weight: bold;
+                margin-top: 20px;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                transition: .2s ease-in;
+                cursor: pointer;
+            }
+            button:hover
+            {
+                background: #6d44b8;
+            }
+            .sign-in
+            {
+                height: 460px;
+                background: #eee;
+                border-radius: 60% / 10%;
+                transform: translateY(-130px);
+                transition: .8s ease-in-out;
+            }
+            .sign-in label
+            {
+                color: #573b8a;
+                padding: 15px;
+                transform: scale(.7);
+            }
+            #chk:checked ~ .sign-in
+            {
+                transform: translateY(-480px);
+            }
+            #chk:checked ~ .sign-in label
+            {
+                transform: scale(1);
+            }
+            #chk:checked ~ .sign-up label
+            {
+                transform: scale(.7);
+            }
+            .social-container
+            {
+                margin: 20px 0;
+            }
+            .social-container a
+            {
+                height: 40px;
+                width: 40px;
+                margin: 0 5px;
+                right: 300px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #ccc;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <input type="checkbox" id="chk" aria-hidden="true">
+            <div class="sign-up">
+                <form>
+                    <label for="chk" aria-hidden="true">Sign Up</label>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="social"><i class="fa-brands fa-google"></i></a>
+                        <a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <input type="text" name="txt" placeholder="username" required="">
+                    <input type="email" name="email" placeholder="email" required="">
+                    <input type="password" name="pswd" placeholder="password" required="">
+                    <button>Sign Up</button>
+                </form>
+
+            </div>
+
+            <div class="sign-in">
+                <form>
+                    <label for="chk" aria-hidden="true">Login</label>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <input type="email" name="email" placeholder="email" required="">
+                    <input type="password" name="pswd" placeholder="password" required="">
+                    <button>login</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
